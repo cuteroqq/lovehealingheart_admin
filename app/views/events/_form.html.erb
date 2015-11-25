@@ -1,0 +1,35 @@
+<div>
+<%= f.label :title, "文章" %>
+<%= f.text_field :title, size: "50" %>
+</div>
+<div>
+<%= f.label :cnttype, "類別" %>
+<%= f.select(:cnttype, [['公益計畫', 1], ['案例平台', 2]]) %>
+</div>
+<div>
+<%= f.label :author, "作者/出處" %>
+<%= f.text_field :author, size: "30" %>
+</div>
+<div>
+<%= f.collection_check_boxes(:category_ids, Category.all, :id, :cname) %>
+</div>
+<div>
+<%= f.text_area :description, size: "60x20"  %>
+</div>
+<div>
+<%= f.label :public_date, "公開日" %>
+<%= f.date_field :public_date %>
+</div>
+<div>
+<%= f.check_box :is_public %>
+<%= f.label :is_public, "草稿" %>
+</div>
+<div>
+<% if @event.errors.any? %>
+  <ul>
+  <% @event.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+  </ul>
+<% end %>
+</div>

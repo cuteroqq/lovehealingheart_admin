@@ -1,0 +1,15 @@
+<p><%= @main.title %></p>
+<p>
+<% @main.categories.each do |g| %>
+  <%= g.cname %>
+<% end %>
+</p>
+<table border="0">
+  <tr>
+    <td><%= @main.public_date %></td>
+    <td><%= @main.author %></td>
+  </tr>
+</table>
+<p><%= simple_format(@main.description) %></p>
+
+<p><%= link_to 'Back to index', mains_path %></p>

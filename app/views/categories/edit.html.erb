@@ -1,0 +1,5 @@
+<%= form_for @category, :url => category_path(@category), :method => :patch do |f| %>
+    <%= render :partial => 'form', :locals => { :f => f } %>
+    <%= f.submit "Update" %>
+    <%= link_to 'Back to index', :controller => 'categories', :action => 'index' %>
+<% end %>

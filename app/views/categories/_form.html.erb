@@ -1,0 +1,17 @@
+<div>
+<%= f.label :cname, "名稱" %>
+<%= f.text_field :cname, size: "50" %>
+</div>
+<div>
+<%= f.check_box :status %>
+<%= f.label :status, "隱藏" %>
+</div>
+<div>
+<% if @category.errors.any? %>
+  <ul>
+  <% @category.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+  </ul>
+<% end %>
+</div>

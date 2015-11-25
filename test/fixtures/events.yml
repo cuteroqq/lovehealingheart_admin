@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 1
+  category: 1
+  title: MyString
+  description: MyText
+  author: MyString
+  is_public: false
+  public_date: 2015-09-01
+  share: 1
+  like: 1
+
+two:
+  type: 1
+  category: 1
+  title: MyString
+  description: MyText
+  author: MyString
+  is_public: false
+  public_date: 2015-09-01
+  share: 1
+  like: 1

@@ -1,0 +1,15 @@
+<ul>
+<% @categories.each do |category| %>
+  <li>
+  <% if category.status %>
+  <img src="/images/check_on.png" alt="*" />
+  <% else %>
+  <%= image_tag("check_off.png", :alt => "off") %>
+  <% end %>
+  <%= category.cname %>
+  <%= link_to 'Edit', edit_category_path(category) %>
+  <%= button_to 'Delete', category_path(category), :method => :delete, :data => { :confirm => "Are you sure?" } %>
+  </li>
+<% end %>
+</ul>
+<%= link_to 'New category', new_category_path %>

@@ -1,0 +1,12 @@
+<p>Hola! It's <%= Time.now %></p>
+<ul>
+<% @mains.each do |event| %>
+  <li>
+  <%= event.title %>
+    <% event.categories.each do |g| %>
+      <%= g.cname %>
+	  <% end %>
+  <%= link_to "Show", main_path(event) %>
+  </li>
+<% end %>
+</ul>

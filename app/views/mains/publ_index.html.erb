@@ -1,0 +1,12 @@
+<p>Hola! It's <%= Time.now %></p>
+<ul>
+<% @mains.each do |event| %>
+  <li>
+  <%= event.title %>
+    <% event.categories.each do |g| %>
+      <%= g.cname %>
+	  <% end %>
+  <%= link_to "Show", :controller => 'mains', :action => :publ_content , :id => event %>
+  </li>
+<% end %>
+</ul>

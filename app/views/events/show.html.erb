@@ -1,0 +1,15 @@
+<p><%= @event.title %></p>
+<p>
+<% @event.categories.each do |g| %>
+  <%= g.cname %>
+<% end %>
+</p>
+<table border="0">
+  <tr>
+    <td><%= @event.public_date %></td>
+    <td><%= @event.author %></td>
+  </tr>
+</table>
+<p><%= simple_format(@event.description) %></p>
+
+<p><%= link_to 'Back to index', events_path %></p>

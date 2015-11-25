@@ -1,0 +1,21 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  database: c9
+  host: <%=ENV['IP']%>
+  username: <%=ENV['C9_USER']%>
+  password:
+production:
+  adapter: mysql2
+  encoding: utf8
+  database: c9
+  host: <%=ENV['IP']%>
+  username: <%=ENV['C9_USER']%>
+  password:
+test:
+  adapter: mysql2
+  encoding: utf8
+  database: c9
+  host: <%=ENV['IP']%>
+  username: <%=ENV['C9_USER']%>
+  password:
